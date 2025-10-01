@@ -1,0 +1,20 @@
+{
+  "name": "task-management-dashboard",
+  "version": "1.0.0",
+  "description": "Backend API for managing tasks, users, and status logic using Node.js, Express, and PostgreSQL. ",
+  "homepage": "https://github.com/vmoreira-dev/Task-Management-Dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/vmoreira-dev/Task-Management-Dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmoreira-dev/Task-Management-Dashboard.git"
+  },
+  "license": "MIT",
+  "author": "Vinicius",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
