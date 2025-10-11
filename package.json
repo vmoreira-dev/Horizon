@@ -4,11 +4,11 @@
   "description": "Backend API for managing tasks, users, and status logic using Node.js, Express, and PostgreSQL. ",
   "homepage": "https://github.com/vmoreira-dev/Task-Management-Dashboard#readme",
   "bugs": {
-    "url": "https://github.com/vmoreira-dev/Task-Management-Dashboard/issues"
+    "url": "https://github.com/vmoreira-dev/Horizon/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vmoreira-dev/Task-Management-Dashboard.git"
+    "url": "git+https://github.com/vmoreira-dev/Horizon.git"
   },
   "license": "MIT",
   "author": "Vinicius",
