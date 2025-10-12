@@ -14,6 +14,3 @@ It focuses on clean design, responsive layouts, and scalable data management.
 - Tailwind CSS
 - Node.js / Express (API)
 - PostgreSQL
-
-## Status
-🧱 In development — project structure and UI scaffolding complete.
