@@ -1,10 +1,18 @@
+import LayoutShell from "@/components/layout-shell";
+import Board from "@/components/board";
+
 export default function Page() {
   return (
-    <main className="min-h-dvh grid place-items-center">
-      <div className="text-center">
-        <h1 className="text-3xl font-semibold tracking-tight">Horizon</h1>
-        <p className="opacity-70">Scaffold online. Depth loading soon.</p>
-      </div>
-    </main>
+    <LayoutShell>
+  <div className="rounded-lg border p-6 mb-6">
+    <h2 className="text-xl font-medium">Dashboard</h2>
+    <p className="text-sm text-muted-foreground">
+      Start building your focus board here.
+    </p>
+  </div>
+
+  <Board />
+</LayoutShell>
+
   );
 }

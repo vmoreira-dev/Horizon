@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
-  background: #fff;
-  color: #111;
-}
+/* tiny, safe reset */
+html, body { height: 100%; }
+body { min-height: 100dvh; }
