@@ -1,18 +1,7 @@
-import LayoutShell from "@/components/layout-shell";
-import Board from "@/components/board";
-
-export default function Page() {
+export default function Home() {
   return (
-    <LayoutShell>
-  <div className="rounded-lg border p-6 mb-6">
-    <h2 className="text-xl font-medium">Dashboard</h2>
-    <p className="text-sm text-muted-foreground">
-      Start building your focus board here.
-    </p>
-  </div>
-
-  <Board />
-</LayoutShell>
-
+    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+      <h1 className="text-6xl font-bold text-white">Peak Horizon</h1>
+    </div>
   );
 }
