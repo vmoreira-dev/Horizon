@@ -19,10 +19,10 @@ It focuses on clean design, responsive layouts, and scalable data management.
 
 ## Stack
 
-- Next.js (App Router)  
+- Next.js 
 - TypeScript  
 - Tailwind CSS  
-- Node.js / Express (API)  
+- Node.js / Express 
 - PostgreSQL  
 
 ---
