@@ -1,5 +1,8 @@
 # Horizon
 
+![Horizon Preview](<img width="1536" height="1024" alt="8c9f5b1d-a906-4710-b0b4-dc82b1f68615" src="https://github.com/user-attachments/assets/0fb75adb-8ea9-4e3e-a51a-5c74b7455c35" />
+)
+
 Task management dashboard with secure authentication and an adaptive UI.
 
 ---
