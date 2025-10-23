@@ -1,6 +1,8 @@
 # Horizon
 
-![Uploading 8c9f5b1d-a906-4710-b0b4-dc82b1f68615.png…]()
+<p align="center">
+  <img src="./public/preview.png" alt="Horizon Preview" width="800"/>
+</p>
 
 
 Task management dashboard with secure authentication and an adaptive UI.
