@@ -27,3 +27,12 @@ body {
 
 
 
+@layer utilities {
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl shadow-lg;
+  }
+
+  .horizon-bg {
+    background: linear-gradient(135deg, #0f172a, #1a1a1a, #111827);
+  }
+}
