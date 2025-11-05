@@ -29,18 +29,22 @@ export default function Home() {
   return (
     <main className="glass-container text-center space-y-10">
       {/* Header */}
-      <div>
-        <div className="flex justify-between items-start">
-          <h1 className="text-7xl font-bold tracking-tight text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.3)]">Horizon</h1>
+<div className="relative text-center space-y-3">
+  <h1 className="text-7xl font-bold tracking-tight text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.3)]">
+    Horizon
+  </h1>
 
-          <button className="text-sm text-white/70 hover:text-white absolute right-12 top-12">
-            Log in
-          </button>
-        </div>
-        <p className="text-white/70 text-lg font-light mt-4">
-  Task management dashboard with secure authentication and an adaptive UI.
-</p>
-      </div>
+  <p className="text-white/70 text-lg font-light max-w-xl mx-auto">
+    Task management dashboard with secure authentication and an adaptive UI.
+  </p>
+
+  <button className="text-sm text-white/70 hover:text-white absolute right-12 top-0">
+    Log in
+  </button>
+</div>
+ 
+
+      
 
       {/* Task Columns */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
