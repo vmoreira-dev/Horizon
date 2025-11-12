@@ -11,6 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="horizon-bg">
         {children}
+      <div className="ember-layer" />
       </body>
     </html>
   );
