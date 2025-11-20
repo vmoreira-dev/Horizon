@@ -1,27 +1,39 @@
-import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
-import { Status } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
+import { auth } from "@/auth";
 
 export async function GET() {
+  const session = await auth();
+
+  if (!session || !session.user) {
+    return NextResponse.json([], { status: 401 });
+  }
+
   const tasks = await prisma.task.findMany({
-    orderBy: { createdAt: "asc" }
+    where: {
+      userId: session.user.id,
+    },
+    orderBy: { createdAt: "desc" },
   });
+
   return NextResponse.json(tasks);
 }
 
 export async function POST(req: Request) {
-  const { title } = await req.json();
+  const session = await auth();
 
-  if (!title) {
-    return NextResponse.json({ error: "Title required" }, { status: 400 });
+  if (!session || !session.user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
+
+  const { title } = await req.json();
 
   const task = await prisma.task.create({
     data: {
       title,
-      status: Status.TODO
-    }
+      userId: session.user.id,
+    },
   });
 
-  return NextResponse.json(task, { status: 201 });
+  return NextResponse.json(task);
 }

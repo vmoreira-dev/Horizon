@@ -22,8 +22,16 @@ export function useTasks() {
   async function createTask(title: string) {
     const res = await fetch("/api/tasks", {
       method: "POST",
-      body: JSON.stringify({ title })
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title }),
     });
+
+    if (!res.ok) {
+      console.error("Failed to create task:", await res.text());
+      return;
+    }
 
     const task = await res.json();
     setTasks((prev) => [...prev, task]);
@@ -32,7 +40,10 @@ export function useTasks() {
   async function updateTask(id: string, changes: Partial<Task>) {
     const res = await fetch(`/api/tasks/${id}`, {
       method: "PATCH",
-      body: JSON.stringify(changes)
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(changes),
     });
 
     const updated = await res.json();
