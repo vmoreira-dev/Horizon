@@ -5,13 +5,16 @@ import { prisma } from "@/lib/prisma";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
+
   providers: [
     GitHub({
       clientId: process.env.AUTH_GITHUB_ID!,
       clientSecret: process.env.AUTH_GITHUB_SECRET!,
     }),
   ],
+
   session: { strategy: "jwt" },
+
   callbacks: {
     async jwt({ token, user }) {
       if (user) token.id = user.id;

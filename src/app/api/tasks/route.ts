@@ -5,14 +5,12 @@ import { auth } from "@/auth";
 export async function GET() {
   const session = await auth();
 
-  if (!session || !session.user) {
+  if (!session?.user?.id) {
     return NextResponse.json([], { status: 401 });
   }
 
   const tasks = await prisma.task.findMany({
-    where: {
-      userId: session.user.id,
-    },
+    where: { userId: session.user.id },
     orderBy: { createdAt: "desc" },
   });
 
@@ -22,7 +20,7 @@ export async function GET() {
 export async function POST(req: Request) {
   const session = await auth();
 
-  if (!session || !session.user) {
+  if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
