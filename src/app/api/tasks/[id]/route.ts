@@ -1,38 +1,37 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-
 import { auth } from "@/auth";
 
-export async function PATCH(req: Request, { params }: { params: { id: string } }) {
+export async function GET() {
   const session = await auth();
 
-  if (!session || !session.user?.id) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!session?.user?.id) {
+    return NextResponse.json([], { status: 401 });
   }
 
-  const { id } = params;
-  const body = await req.json();
-
-  const updated = await prisma.task.update({
-    where: { id },
-    data: body,
+  const tasks = await prisma.task.findMany({
+    where: { userId: session.user.id },
+    orderBy: { createdAt: "desc" },
   });
 
-  return NextResponse.json(updated);
+  return NextResponse.json(tasks);
 }
 
-export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+export async function POST(req: Request) {
   const session = await auth();
 
-  if (!session || !session.user?.id) {
+  if (!session?.user?.id) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { id } = params;
+  const { title } = await req.json();
 
-  await prisma.task.delete({
-    where: { id },
+  const task = await prisma.task.create({
+    data: {
+      title,
+      userId: session.user.id,
+    },
   });
 
-  return NextResponse.json({ success: true });
+  return NextResponse.json(task);
 }
