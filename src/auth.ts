@@ -1,3 +1,5 @@
+console.log("⚡ AUTH MODULE LOADED");
+
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -20,9 +22,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (user) token.id = user.id;
       return token;
     },
+
     async session({ session, token }) {
       session.user.id = token.id;
       return session;
     },
-  },
-});
+  }
+}); // <-- NO TRAILING COMMA
+console.log("⚡ AUTH MODULE EXPORT COMPLETE");
