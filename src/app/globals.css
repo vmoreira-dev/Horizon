@@ -189,30 +189,3 @@ button:hover {
   text-shadow: 0 0 8px rgba(255, 180, 100, 0.9);
 }
 
-.ember-layer {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.ember-layer::before, .ember-layer::after {
-  content: "";
-  position: absolute;
-  inset: -50%;
-  background:
-    radial-gradient(circle, rgba(255,160,90,0.15) 0%, transparent 70%) repeat;
-  background-size: 200px 200px;
-  animation: drift 60s linear infinite;
-  opacity: 0.08; /* instead of 0.2 */
-}
-
-.ember-layer::after {
-  animation-delay: -30s;
-  opacity: 0.12;
-}
-
-@keyframes drift {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-20%) rotate(360deg); }
-}
