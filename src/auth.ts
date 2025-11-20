@@ -1,11 +1,10 @@
-console.log("⚡ AUTH MODULE LOADED");
-
+// src/auth.ts
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+export const auth = NextAuth({
   adapter: PrismaAdapter(prisma),
 
   providers: [
@@ -22,11 +21,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (user) token.id = user.id;
       return token;
     },
-
     async session({ session, token }) {
       session.user.id = token.id;
       return session;
     },
-  }
-}); // <-- NO TRAILING COMMA
-console.log("⚡ AUTH MODULE EXPORT COMPLETE");
+  },
+});
+
+// 👇 This is the missing part — EXPORT HANDLERS PROPERLY
+export const { handlers, signIn, signOut } = auth;
