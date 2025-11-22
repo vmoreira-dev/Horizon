@@ -8,12 +8,10 @@ export default function Home() {
   const { tasks, loading, createTask, moveTask, deleteTask } = useTasks();
   const [newTask, setNewTask] = useState("");
 
-  // Filter tasks into columns
   const todo = tasks.filter((t) => t.status === Status.TODO);
   const inProgress = tasks.filter((t) => t.status === Status.IN_PROGRESS);
   const completed = tasks.filter((t) => t.status === Status.COMPLETED);
 
-  // Column definitions now based on REAL tasks
   const columns = [
     { title: "To Do", tasks: todo },
     { title: "In Progress", tasks: inProgress },
@@ -29,7 +27,7 @@ export default function Home() {
         </h1>
 
         <p className="text-white/70 text-lg font-light max-w-xl mx-auto">
-          Task management dashboard with secure authentication and an adaptive UI.
+          Task management dashboard with adaptive UI.
         </p>
 
         <button className="text-sm text-white/70 hover:text-white absolute right-12 top-0">
@@ -42,7 +40,7 @@ export default function Home() {
         {columns.map((col) => (
           <div
             key={col.title}
-            className={`space-y-4 ${
+            className={`space-y-6 ${
               col.title === "In Progress"
                 ? "scale-[1.01] brightness-110"
                 : "brightness-95"
@@ -55,26 +53,46 @@ export default function Home() {
             {loading ? (
               <p className="text-sm text-white/40">Loading…</p>
             ) : col.tasks.length > 0 ? (
-              <div className="space-y-4">
+              <div className="space-y-10">
                 {col.tasks.map((task) => (
-                  <div
-                    key={task.id}
-                    className="glass-card task-card text-left p-4 flex justify-between items-center"
-                  >
-                    <div>
-                      <h3 className="font-medium text-white">{task.title}</h3>
+                  <div key={task.id} className="relative group flex flex-col items-center">
+
+                    {/* CARD */}
+                    <div className="glass-card task-card p-4 rounded-xl text-left shadow-[0_4px_10px_rgba(0,0,0,0.20)] w-full">
+                      <h3 className="font-medium text-white break-words">
+                        {task.title}
+                      </h3>
                       <p className="text-xs text-white/60">
                         Created: {new Date(task.createdAt).toLocaleDateString()}
                       </p>
                     </div>
 
-                    {/* ACTIONS (FULL BACK + FORWARD + DELETE) */}
-                    <div className="flex gap-2">
-
-                      {/* BACK button */}
+                    {/* BUTTON FLOAT — CLEAN + SPACED */}
+                    <div
+                      className="
+                        absolute 
+                        -bottom-6 
+                        flex gap-3 
+                        opacity-0 
+                        group-hover:opacity-100 
+                        transition-opacity 
+                        duration-200
+                        pointer-events-auto
+                      "
+                    >
+                      {/* BACK */}
                       {col.title !== "To Do" && (
                         <button
-                          className="px-2 py-1 text-xs bg-slate-500/20 border border-slate-400/40 rounded-lg hover:bg-slate-500/30 text-white"
+                          className="
+                            px-2 py-[4px] text-[11px]
+                            bg-slate-500/40 
+                            border border-slate-300/40 
+                            rounded-full 
+                            hover:bg-slate-500/60 
+                            text-white 
+                            backdrop-blur-md
+                            shadow-[0_2px_6px_rgba(0,0,0,0.25)]
+                          "
                           onClick={() => {
                             const prev =
                               col.title === "In Progress"
@@ -83,14 +101,23 @@ export default function Home() {
                             moveTask(task.id, prev);
                           }}
                         >
-                          Back
+                          ←
                         </button>
                       )}
 
-                      {/* MOVE FORWARD button */}
+                      {/* MOVE */}
                       {col.title !== "Completed" && (
                         <button
-                          className="px-2 py-1 text-xs bg-emerald-500/20 border border-emerald-400/40 rounded-lg hover:bg-emerald-500/30 text-white"
+                          className="
+                            px-2 py-[4px] text-[11px]
+                            bg-emerald-500/40 
+                            border border-emerald-300/40 
+                            rounded-full 
+                            hover:bg-emerald-500/60 
+                            text-white 
+                            backdrop-blur-md
+                            shadow-[0_2px_6px_rgba(0,0,0,0.25)]
+                          "
                           onClick={() => {
                             const next =
                               col.title === "To Do"
@@ -99,18 +126,26 @@ export default function Home() {
                             moveTask(task.id, next);
                           }}
                         >
-                          Move
+                          →
                         </button>
                       )}
 
-                      {/* DELETE button */}
+                      {/* DELETE */}
                       <button
-                        className="px-2 py-1 text-xs bg-red-500/20 border border-red-400/40 rounded-lg hover:bg-red-500/30 text-white"
+                        className="
+                          px-2 py-[4px] text-[11px]
+                          bg-red-500/40 
+                          border border-red-300/40 
+                          rounded-full 
+                          hover:bg-red-500/60 
+                          text-white 
+                          backdrop-blur-md
+                          shadow-[0_2px_6px_rgba(0,0,0,0.25)]
+                        "
                         onClick={() => deleteTask(task.id)}
                       >
-                        Delete
+                        ✕
                       </button>
-
                     </div>
                   </div>
                 ))}
@@ -119,9 +154,9 @@ export default function Home() {
               <p className="text-sm text-white/40">No tasks yet.</p>
             )}
 
-            {/* Inline Add Task Input */}
+            {/* Add task */}
             {col.title === "To Do" && (
-              <div className="w-full flex gap-2">
+              <div className="w-full flex gap-2 mt-6">
                 <input
                   value={newTask}
                   onChange={(e) => setNewTask(e.target.value)}
