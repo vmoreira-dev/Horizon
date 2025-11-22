@@ -6,15 +6,14 @@
 
 
 
-Task management dashboard with secure authentication and an adaptive UI.
+A clean and simple full-stack task dashboard built with Next.js, React, Prisma, and PostgreSQL.
 
 ---
 
 ## Overview
 
-Horizon is a modern task dashboard built with Next.js, TypeScript, and Tailwind.  
-It focuses on clean design, responsive layouts, and scalable data management.
-
+Horizon is a lightweight, minimal task board focused on clarity and speed.
+It stores tasks in a PostgreSQL database and uses straightforward API routes through the Next.js App Router for all CRUD operations.
 ---
 
 ## Live Demo
@@ -25,18 +24,19 @@ It focuses on clean design, responsive layouts, and scalable data management.
 
 ## Stack
 
-- Next.js 
+- Next.js 15 (App Router + API Routes)
+- React 19
 - TypeScript  
 - Tailwind CSS  
-- Node.js / Express 
-- PostgreSQL  
+- Prisma ORM (v6)
+- PostgreSQL (NeonDB) 
 
 ---
 
 ## Features
 
-- Task creation, editing, and completion tracking  
-- Secure authentication and protected routes  
-- Responsive dashboard layout for all devices  
-- Real-time task state updates via API  
-- Structured PostgreSQL backend for scalable storage
+- Task creation, movement between columns, and deletion 
+- Clean, simple, no-auth architecture
+- Responsive dashboard layout for all devices
+- Fast updates using lightweight API requests  
+- PostgreSQL-backed storage for persistence
