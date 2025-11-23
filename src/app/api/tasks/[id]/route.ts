@@ -1,14 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-interface Context {
-  params: {
-    id: string;
-  };
-}
-
-export async function PATCH(req: Request, { params }: Context) {
-  const { id } = params;
+export async function PATCH(req: NextRequest, context: { params: Promise<{ id: string }> }) {
+  const { id } = await context.params;
 
   const data = await req.json();
 
@@ -20,8 +14,8 @@ export async function PATCH(req: Request, { params }: Context) {
   return NextResponse.json(updated);
 }
 
-export async function DELETE(req: Request, { params }: Context) {
-  const { id } = params;
+export async function DELETE(req: NextRequest, context: { params: Promise<{ id: string }> }) {
+  const { id } = await context.params;
 
   await prisma.task.delete({
     where: { id },
