@@ -15,9 +15,8 @@ A clean and simple full-stack task dashboard built with Next.js, React, Prisma, 
 ---
 
 ## Overview
-
 Horizon is a lightweight, minimal task board focused on clarity and speed.
-It stores tasks in a PostgreSQL database and uses straightforward API routes through the Next.js App Router for all CRUD operations.
+
 ---
 
 ## Live Demo
