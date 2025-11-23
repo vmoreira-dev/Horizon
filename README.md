@@ -1,8 +1,9 @@
 # Horizon
 
 <p align="center">
-  <img height="450" width="750" alt="Horizon Preview" src="https://github.com/user-attachments/assets/021ef67a-e349-4181-86d4-28b34d5081b2" />
+  <img height="450" width="750" alt="Horizon Preview" src="https://github.com/user-attachments/assets/ef4278f6-544d-4fd5-915d-e6aac03c29c2" />
 </p>
+
 
 
 
