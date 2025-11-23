@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function PATCH(req: Request, context: any) {
-  const { id } = await context.params;  // ← THIS is what Next.js wants
+interface Context {
+  params: {
+    id: string;
+  };
+}
+
+export async function PATCH(req: Request, { params }: Context) {
+  const { id } = params;
 
   const data = await req.json();
 
@@ -14,8 +20,8 @@ export async function PATCH(req: Request, context: any) {
   return NextResponse.json(updated);
 }
 
-export async function DELETE(req: Request, context: any) {
-  const { id } = await context.params;  // ← same rule
+export async function DELETE(req: Request, { params }: Context) {
+  const { id } = params;
 
   await prisma.task.delete({
     where: { id },
