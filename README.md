@@ -5,11 +5,6 @@
 </p>
 
 
-
-
-
-
-
 A clean and simple full-stack task dashboard built with Next.js, React, Prisma, and PostgreSQL.
 
 ---
