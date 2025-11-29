@@ -30,9 +30,7 @@ export default function Home() {
           Task management dashboard with adaptive UI.
         </p>
 
-        <button className="text-sm text-white/70 hover:text-white absolute right-12 top-0">
-          Log in
-        </button>
+        
       </div>
 
       {/* Columns */}
