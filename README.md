@@ -5,12 +5,12 @@
 </p>
 
 
-A clean and simple full-stack task dashboard built with Next.js, React, Prisma, and PostgreSQL.
+A clean task board for tracking work without distraction.
 
 ---
 
 ## Overview
-Horizon is a lightweight, minimal task board focused on clarity and speed.
+Horizon is a lightweight task board for managing work across simple columns. Tasks can be created, moved between states, and removed with instant feedback and persistent storage..
 
 ---
 
