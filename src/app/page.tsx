@@ -26,9 +26,7 @@ export default function Home() {
           Horizon
         </h1>
 
-        <p className="text-white/70 text-lg font-light max-w-xl mx-auto">
-          Task management dashboard with adaptive UI.
-        </p>
+        
 
         
       </div>
