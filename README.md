@@ -2,7 +2,7 @@
 
 A clean task board for tracking work without distraction
 
-![Horizon — Task Board UI](./assets/horizon.webp)
+![Horizon — Task Board UI](./public/assets/horizon.webp)
 
 ---
 
