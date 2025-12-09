@@ -1,8 +1,8 @@
 # Horizon
 
-A clean task board for tracking work without distraction
-
 ![Horizon — Task Board UI](./public/assets/horizon.webp)
+
+A clean task board for tracking work without distraction
 
 ---
 
