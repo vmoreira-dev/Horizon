@@ -4,7 +4,7 @@
 
 A task board designed to disappear while in use
 
-**Live:** https://horizon.vmoreira.dev
+https://horizon.vmoreira.dev
 
 ---
 
