@@ -9,7 +9,7 @@
 Horizon is a lightweight task board built around simple columns and fast interaction.  
 Tasks can be created moved and removed with immediate feedback and persistent storage.
 
-View https://horizon.vmoreira.dev
+View: https://horizon.vmoreira.dev
 
 ---
 
