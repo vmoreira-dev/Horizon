@@ -2,16 +2,14 @@
 
 ![Horizon — Task Board UI](./public/assets/horizon.webp)
 
-A task board designed to disappear while in use
-
-https://horizon.vmoreira.dev
-
 ---
 
 ## Overview
 
 Horizon is a lightweight task board built around simple columns and fast interaction.  
 Tasks can be created moved and removed with immediate feedback and persistent storage.
+
+View https://horizon.vmoreira.dev
 
 ---
 
