@@ -8,7 +8,9 @@ A clean task board for tracking work without distraction
 
 ## Overview
 
-Horizon is a lightweight task board for managing work across simple columns. Tasks can be created, moved between states, and removed with instant feedback and persistent storage.
+Horizon is a lightweight task board built around simple columns and fast interaction. 
+Tasks can be created moved and removed with immediate feedback and persistent storage.
+
 
 ---
 
