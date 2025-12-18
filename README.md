@@ -4,6 +4,8 @@
 
 A task board designed to disappear while in use
 
+**Live:** https://horizon.vmoreira.dev
+
 ---
 
 ## Overview
@@ -31,9 +33,3 @@ Tasks can be created moved and removed with immediate feedback and persistent st
 - Tailwind CSS  
 - Prisma ORM (v6)  
 - PostgreSQL (NeonDB)  
-
----
-
-## Live Demo
-
-https://horizon.vmoreira.dev
