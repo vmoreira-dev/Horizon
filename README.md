@@ -1,33 +1,34 @@
-# Horizon
+# Origin
 
-![Horizon — Task Board UI](./public/assets/horizon.webp)
+![Origin — Portfolio UI](./public/assets/showcase.webp)
 
 ---
 
 ## Overview
 
-Horizon is a lightweight task board built around simple columns and fast interaction.  
-Tasks can be created moved and removed with immediate feedback and persistent storage.
+Origin is a lightweight portfolio surface built to present projects with clarity and consistency.  
+Work is organized as finished systems, emphasizing layout, motion, and visual hierarchy over content volume.
 
-View https://horizon.vmoreira.dev
+View https://vmoreira.dev
 
 ---
 
 ## Design
 
 - Minimal surface area  
-- Immediate feedback  
-- Persistent state  
-- No accounts or setup  
+- Strong visual hierarchy  
+- Controlled motion and transitions  
+- Project-first presentation  
 - Designed to stay out of the way  
 
 ---
 
 ## Execution
 
-- Next.js 15 (App Router + API Routes)  
-- React 19  
+- Next.js (App Router)  
+- React  
 - TypeScript  
 - Tailwind CSS  
-- Prisma ORM (v6)  
-- PostgreSQL (NeonDB)  
+- Framer Motion  
+- shadcn/ui  
+- Vercel  
