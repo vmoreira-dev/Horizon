@@ -1,10 +1,13 @@
 # Horizon
 
-<img
-  src="./public/assets/horizon.webp"
-  alt="Horizon — Task Board UI"
-  width="150%"
-/>
+<p align="center">
+  <img
+    src="./public/assets/horizon.webp"
+    alt="Horizon — Task Board UI"
+    width="100%"
+  />
+</p>
+
 
 
 ---
