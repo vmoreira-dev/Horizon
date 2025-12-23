@@ -3,7 +3,7 @@
 <img
   src="./public/assets/horizon.webp"
   alt="Horizon — Task Board UI"
-  width="100%"
+  width="150%"
 />
 
 
