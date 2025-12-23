@@ -6,8 +6,8 @@
 
 ## Overview
 
-Horizon is a lightweight task board built around simple columns and fast interaction.  
-Tasks can be created moved and removed with immediate feedback and persistent storage.
+Horizon is a minimal task board structured around fixed columns and continuous interaction.
+
 
 [View](https://horizon.vmoreira.dev)
 
