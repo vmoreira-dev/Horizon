@@ -2,10 +2,6 @@
 
 <img src="./public/assets/horizon.webp" alt="Horizon UI" />
 
-
-
-
-
 ---
 
 ## Overview
