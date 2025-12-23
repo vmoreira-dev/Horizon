@@ -16,10 +16,10 @@ Tasks can be created moved and removed with immediate feedback and persistent st
 ## Design
 
 - Minimal surface area  
-- Immediate feedback  
+- Fast, direct interaction  
 - Persistent state  
-- No accounts or setup  
-- Designed to stay out of the way  
+- Low-friction by default  
+
 
 ---
 
