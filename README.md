@@ -1,6 +1,11 @@
 # Horizon
 
-![Horizon — Task Board UI](./public/assets/horizon.webp)
+<img
+  src="./public/assets/horizon.webp"
+  alt="Horizon — Task Board UI"
+  width="100%"
+/>
+
 
 ---
 
