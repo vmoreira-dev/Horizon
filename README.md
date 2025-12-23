@@ -6,8 +6,8 @@
 
 ## Overview
 
-Horizon is a lightweight task board built around simple columns and fast interaction.  
-Tasks can be created moved and removed with immediate feedback and persistent storage.
+Horizon is a minimal task board structured around fixed columns and continuous interaction.
+
 
 [View](https://horizon.vmoreira.dev)
 
@@ -16,18 +16,18 @@ Tasks can be created moved and removed with immediate feedback and persistent st
 ## Design
 
 - Minimal surface area  
-- Immediate feedback  
+- Fast, direct interaction  
 - Persistent state  
-- No accounts or setup  
-- Designed to stay out of the way  
+- Low-friction by default  
+
 
 ---
 
-## Execution
+## Stack
 
-- Next.js 15 (App Router + API Routes)  
+- Next.js 15 (App Router, Turbopack)  
 - React 19  
 - TypeScript  
-- Tailwind CSS  
+- Tailwind CSS (v4)  
 - Prisma ORM (v6)  
 - PostgreSQL (NeonDB)  
