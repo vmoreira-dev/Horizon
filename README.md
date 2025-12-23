@@ -23,7 +23,7 @@ Horizon is a minimal task board structured around fixed columns and continuous i
 
 ---
 
-## Execution
+## Stack
 
 - Next.js 15 (App Router + API Routes)  
 - React 19  
