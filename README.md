@@ -1,6 +1,6 @@
 # Horizon
 
-<img src="./public/assets/horizon.webp" alt="Horizon UI" />
+[![Horizon UI](./public/assets/horizon.webp)](./public/assets/horizon.webp)
 
 ---
 
