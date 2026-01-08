@@ -1,6 +1,6 @@
 # Horizon
 
-[![Horizon UI](./public/assets/horizon.webp)](./public/assets/horizon.webp)
+[![Horizon UI](./public/assets/horizon.webp)](./public/assets/horizon_5_4.webp)
 
 ---
 
