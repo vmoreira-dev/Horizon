@@ -15,10 +15,11 @@ Horizon is a minimal task board structured around fixed columns and continuous i
 
 ## Design
 
-- Minimal surface area  
-- Fast, direct interaction  
-- Persistent state  
-- Low friction by default
+- Dark gradient background behind a fixed three-column board
+- Cards move instantly between columns
+- The board stays visible during interaction
+
+
 
 
 ---
