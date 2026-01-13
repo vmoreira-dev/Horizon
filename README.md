@@ -9,7 +9,7 @@
 Horizon is a minimal task board structured around fixed columns and continuous interaction.
 
 
-[View](https://horizon.vmoreira.dev)
+[Live Demo](https://horizon.vmoreira.dev)
 
 ---
 
@@ -18,16 +18,17 @@ Horizon is a minimal task board structured around fixed columns and continuous i
 - Minimal surface area  
 - Fast, direct interaction  
 - Persistent state  
-- Low-friction by default  
+- Low friction by default
 
 
 ---
 
 ## Stack
 
-- Next.js 15 (App Router, Turbopack)  
-- React 19  
-- TypeScript  
-- Tailwind CSS (v4)  
-- Prisma ORM (v6)  
-- PostgreSQL (NeonDB)  
+- Next.js 15 (App Router, Turbopack)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Prisma ORM
+- PostgreSQL (NeonDB)
+
