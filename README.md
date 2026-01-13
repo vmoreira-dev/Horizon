@@ -25,10 +25,11 @@ Horizon is a minimal task board structured around fixed columns and continuous i
 
 ## Stack
 
-- Next.js 15 (App Router, Turbopack)
-- React 19
+- Next.js
+- React
 - TypeScript
 - Tailwind CSS
 - Prisma ORM
 - PostgreSQL (NeonDB)
+
 
