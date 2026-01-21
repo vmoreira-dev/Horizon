@@ -1,22 +1,25 @@
 import "./globals.css";
 
-
 export const metadata = {
   title: "Horizon",
   description: "Task management dashboard with adaptive UI.",
+  applicationName: "Horizon",
+  icons: {
+    icon: "/favicon-horizon.svg",
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="horizon-bg">
         {children}
-      <div className="ember-layer" />
+        <div className="ember-layer" />
       </body>
     </html>
   );
 }
-
-
-
-
