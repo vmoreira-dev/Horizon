@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <style>
-    :root { --ring:#fff; --core:#E53935
+    :root { --ring:#fff; --core:#D32F2F
+
 ; } /* only change --core */
   </style>
 
