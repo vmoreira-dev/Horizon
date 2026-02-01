@@ -9,7 +9,7 @@
 Horizon is a minimal task board structured around fixed columns and continuous interaction.
 
 
-[Live Demo](https://horizon.vmoreira.dev)
+**[Live Demo](https://horizon.vmoreira.dev)**
 
 ---
 
